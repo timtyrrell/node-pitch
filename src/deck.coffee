@@ -12,6 +12,9 @@ class Deck
     _.each suits, (suit) ->
       _.each values, (value) ->
         cards.push new Card suit, value
-    _.shuffle cards
+    cards
+
+  shuffle: ->
+    _.shuffle @cards
 
 module.exports.Deck = Deck
