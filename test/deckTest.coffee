@@ -10,11 +10,11 @@ describe 'Deck', ->
   describe '#cards()', ->
     before -> @deck = new Deck
     it 'has 52 cards', ->
-      @deck.cards.length.should.equal 52
+      @deck.cards.should.have.length 52
 
     it 'has 13 cards of each suit', ->
       _.each ['Hearts', 'Diamonds', 'Clubs', 'Spades'], (suit) =>
-        (_.filter @deck.cards, (card) -> card.suit == suit).length.should.equal 13
+        (_.filter @deck.cards, (card) -> card.suit == suit).should.have.length 13
 
     it 'has 13 different values for each suit', ->
       _.each ['Hearts', 'Diamonds', 'Clubs', 'Spades'], (suit) =>
