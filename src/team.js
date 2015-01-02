@@ -1,11 +1,11 @@
-class Team {
+export class Team {
   constructor(name = 'Unnamed') {
     this.name = name;
     this.score = 0
   }
 
   isValid() {
-    (this.player1 && this.player2) ? true : false
+    return (this.player1 && this.player2) ? true : false
   }
 
   addPlayer1(player){
@@ -18,4 +18,3 @@ class Team {
     this.player2.team = this
   }
 }
-export default Team;

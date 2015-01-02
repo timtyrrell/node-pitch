@@ -14,7 +14,7 @@ gulp.task('build', function () {
         fullPaths: global.isWatching
     }).add(es6ify.runtime)
         .transform(es6ify)
-        .require(require.resolve('./src/*.js'), {entry: true});
+        .require(require.resolve('./bootstrap.js'), {entry: true});
 
     var bundle = function () {
         return bundler

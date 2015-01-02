@@ -13,15 +13,17 @@
   "devDependencies": {
     "browserify": "^7.0.3",
     "chai": "^1.9.1",
+    "es6ify": "^1.6.0",
     "gulp": "^3.8.10",
     "mocha": "^1.21.4",
+    "mocha-traceur": "^2.1.0",
     "sinon": "^1.10.3",
     "sinon-chai": "^2.5.0",
     "vinyl-source-stream": "^1.0.0",
     "watchify": "^2.2.1"
   },
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script/register -w"
+    "test": "mocha --compilers js:mocha-traceur test/*.js -w"
   },
   "repository": {
     "type": "git",
