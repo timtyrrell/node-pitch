@@ -1,5 +1,5 @@
 export class Player {
-  constructor(name){
+  constructor(name = 'No-name'){
     this.name = name
     this.team = null
     // @cards = []
