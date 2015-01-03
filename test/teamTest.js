@@ -6,27 +6,27 @@ chai.should()
 describe('Team', () => {
   context('when creating a team', () => {
     it('can take a name', () => {
-      var team = new Team("Cool People")
+      let team = new Team("Cool People")
       team.name.should.equal("Cool People")
     });
   });
 
   context('when checking validity', () => {
     it('has 2 players', () => {
-      var team = new Team()
+      let team = new Team()
       team.addPlayer1(new Player())
       team.addPlayer2(new Player())
       team.isValid().should.be.true
     });
 
     it('must have 2 players', () => {
-      var team = new Team()
+      let team = new Team()
       team.isValid().should.be.false
     });
   });
 
   context('when adding players', () => {
-    var player1, player2, team;
+    let player1, player2, team;
     before(() => {
       player1 = new Player()
       player2 = new Player()
