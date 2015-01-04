@@ -1,6 +1,6 @@
 export class Team {
   constructor(name = 'Unnamed') {
-    this.name = name;
+    this.name = name
     this.score = 0
   }
 

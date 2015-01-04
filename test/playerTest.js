@@ -3,15 +3,13 @@ var chai = require('chai')
 chai.should()
 
 describe('Player', () => {
-  let player;
+  let player
 
-  before(() => {
-    player = new Player('Tanis')
-  });
+  before(() => { player = new Player('Tanis') })
 
   describe('#new', () => {
     it('has a name', () => {
       player.name.should.equal('Tanis')
-    });
-  });
-});
+    })
+  })
+})
